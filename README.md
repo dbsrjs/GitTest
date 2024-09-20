@@ -1,1 +1,2 @@
-Hello this test
+Hello
+I linked GitHub and Visual Studio Code.
