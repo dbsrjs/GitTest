@@ -1,2 +1,2 @@
-Hello
-I linked GitHub and Visual Studio Code.
+# Hello
+## I linked GitHub and Visual Studio Code.
