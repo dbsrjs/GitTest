@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import SignInScreen from './screen/SignInScreen';
 import { WHITE } from './colors';
 
@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
     backgroundColor: WHITE,
     alignItems: 'center',
     justifyContent: 'center',
-    //backgroundColor: '#fff',
   },
 });
 
