@@ -4,30 +4,33 @@ import Input, {
   ReturnKeyTypes,
   IconNames,
 } from '../components/Input';
-import { useState, useRef, useEffect } from 'react';
+import { useContext, useState, useRef, useEffect } from 'react';
 import Button from '../components/Button';
 import { signIn } from '../api/auth';
 import PropTypes from 'prop-types';
+import UserContext from '../contexts/UserContext';
+import { useUserContext } from '../contexts/UserContext';
 
-const SignInScreen = ({ navigation }) => {
+const SignInScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const passwordRef = useRef(null);
   const [disabled, setDisabled] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const { setUser } = useUserContext();
 
   useEffect(() => {
     setDisabled(!email || !password);
   }, [email, password]);
 
-  const onSubmit = async () => {
+  const onSubmit = async (setUser) => {
     if (!isLoading && !disabled) {
       try {
         Keyboard.dismiss();
         const data = await signIn(email, password);
         console.log(data);
         setIsLoading(false);
-        navigation.navigate('List');
+        setUser(data);
       } catch (error) {
         Alert.alert('로그인 실패', error, [
           { text: '확인', onPress: () => setIsLoading(false) },
@@ -72,7 +75,7 @@ const SignInScreen = ({ navigation }) => {
   );
 };
 
-SignInScreen.PropTypes = {
+SignInScreen.propTypes = {
   navigation: PropTypes.object,
 };
 
