@@ -1,7 +1,5 @@
 
-minsung kim <rqpanxoqbxia1@gmail.com>
-오후 5:19 (24분 전)
-나에게
+# from: minsung kim <rqpanxoqbxia1@gmail.com>
 
 1강
 https://docs.google.com/presentation/d/1oBMZt3Oo5usIAvkiBFijpJAAhbD-y7vNZOXpBEjlZjA/edit?usp=sharing
