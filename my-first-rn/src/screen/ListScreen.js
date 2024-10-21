@@ -1,26 +1,17 @@
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import EmptyList from '../components/EmptyList';
+import List from '../components/List';
 
-const ListScreen = ({ navigation, route }) => {
-  console.log('Rendering ListScreen', route.params);
+const ListScreen = () => {
+  const { bottom } = useSafeAreaInsets();
+  const todos = [];
 
   return (
-    <View style={styles.container}>
-      <Text style={{ FontSize: 30 }}>List Screen</Text>
-      <Button title="push" onPress={() => navigation.push('List')} />
-      <Button
-        title="navigate"
-        onPress={() => navigation.navigate('List', { ts: Date.now() })}
-      />
+    <View style={{ flex: 1, paddingBottom: bottom }}>
+      {todos.length ? <List data={todos} /> : <EmptyList />}
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
 
 export default ListScreen;

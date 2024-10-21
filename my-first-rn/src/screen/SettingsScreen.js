@@ -1,9 +1,14 @@
 import { StyleSheet, View } from 'react-native';
+import Button, { ButtonTypes } from '../components/Button';
 
 const SettingsScreen = () => {
   return (
     <View style={styles.container}>
-      <Text style={{ fontSize: 30 }}>Setting Screen</Text>
+      <Button
+        title="로그아웃"
+        onPress={() => setUser(null)}
+        ButtonType={ButtonTypes.DANGER}
+      />
     </View>
   );
 };
