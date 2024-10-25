@@ -1,3 +1,4 @@
+import 'react-native-get-random-values';
 import { StatusBar } from 'expo-status-bar';
 import { UserProvider } from 'react';
 import Navigation from './navigations/Navigation';
