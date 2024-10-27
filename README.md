@@ -1,6 +1,4 @@
 
-# from: minsung kim <rqpanxoqbxia1@gmail.com>
-
 1강
 https://docs.google.com/presentation/d/1oBMZt3Oo5usIAvkiBFijpJAAhbD-y7vNZOXpBEjlZjA/edit?usp=sharing
 
